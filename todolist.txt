@@ -1,0 +1,63 @@
+(#) - means completed
+
+1.7 Expected distance will be calculated in order to find the traversing error
+
+1.8 Traversing distance bug fixed
+
+1.9 Minor bugs fixed
+
+2.0 #Clue Map added (Clue.pdf)
+    Minor bugs fixed
+
+2.1 Minor bugs fixed
+
+2.2 Minor bugs fixed
+
+2.3 Minor bugs fixed
+
+2.4 The gravitation has been reduced to make the game easier to be performed using Wheelchair
+
+2.5 The Door edges have been trimmed 
+
+2.6 Allocentric mode has been added to the game (/ALLOCENTRIC) 
+
+2.7 The suffiex ALLO and EGO will be added the saving directories automatically 
+    Translation and rotation velocity of the joystick can be set using external switches (/JOYTRANSVEL 1.0 /JOYANGVEL 1.0)	
+
+2.8 Beside English, French, Spanish and German languages have been added to the game (LANGUAGE 1)
+
+2.9 Kidmode added to the game which swaps the shapes to animals
+    Jumping has been disabled except for testmode
+    Setting the tilt using the Joystick has been disabled
+
+3.0 Background Animal sound added to the KIDMODE (activated by the /ANIMSOUND switch)
+
+3.1 #X and Z translation velocity difference fixed
+    #Door tile (70) modified to soft edges
+3.2 #wrapping issues fixed
+    #gap at top of stairs fixed
+    #90 degree stairs option added
+**************************************************************************************
+IN KINETICA -
+NEED TO DO THE FOLLOWING:
+
+Add translations for instructions and hud
+use DirectX for playing media
+	switch for different media files for different languages
+use DirectX to read in joystick movments
+create angular momentum
+create switch for momentum
+	momentum on for joystick, off for wheelchair
+		need way to recognize wheelchair vs. joystick
+write to logfile (play?)
+disable object creation
+add player
+	texture wrap player?
+	add player in wheelchair
+texture wrap ramps
+	fix ramp tops
+#fix top of stairs	
+	#wrap
+fix mouse movement mouse mode
+#disable up-down movement joystick mode
+#disable jumping option keyboard mode

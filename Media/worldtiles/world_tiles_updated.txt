@@ -1,0 +1,22 @@
+World Tiles - Updated
+---------------------
+---------------------
+00 - empty
+08 - sidewalk
+09 - sidewalk corner
+63 - Grass
+64 - Hardwood Floor
+65 - Circle Window
+66 - X Window
+68 - Triangle Window
+69 - Window
+70 - Door
+71 - Wall (Corner)
+72 - Wall
+73 - Stairs (with sign)
+74 - Roof
+76 - Tim Hortons Wall - in use
+77 - ATM wall - in use
+78 - Kitten
+79 - Puppy
+80 - Cow

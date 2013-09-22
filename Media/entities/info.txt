@@ -1,0 +1,4 @@
+=== entities ===
+00 - disccartridge
+01 - elevator
+02 - trashcan

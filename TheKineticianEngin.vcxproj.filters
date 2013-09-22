@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{c6a1c71f-db76-460a-a0ba-915ebb5ee0ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\generic">
+      <UniqueIdentifier>{f84be03c-8fa4-447a-a393-07ed82fe18f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\generic\dashboard">
+      <UniqueIdentifier>{f1d441d5-e151-4179-ab59-29d0a020ae52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\generic\sdldraw">
+      <UniqueIdentifier>{48967649-2df9-472e-bd1e-14c81d637c65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\generic\OpenAL">
+      <UniqueIdentifier>{c22e4ba1-d9fc-4e51-9e18-d1e1934b2916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\generic\OpenGL">
+      <UniqueIdentifier>{34fd7ec0-008d-4249-b44b-080b4a2cf27e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\generic\Sky">
+      <UniqueIdentifier>{b89e21fb-c7f9-4bcf-a86a-287fc684235c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\generic\projectspecific">
+      <UniqueIdentifier>{3c64ab24-c43a-42a6-848e-5c509fcd09af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\projectloop.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectsetup.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\settings.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\drawhud.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\drawworld.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\entities.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\genentities.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\genworldgrid.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\minimap.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\play.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\saveandload.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\projectspecific\tiles.h">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashbars.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashbutton.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashcursor.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashloop.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashmenu.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashonoff.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashsetup.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashtext.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dashboard\dashtime.h">
+      <Filter>source\generic\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\opengl\Build2DMipMapsGL.h">
+      <Filter>source\generic\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\opengl\loadbmp.h">
+      <Filter>source\generic\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\opengl\loadtexture.h">
+      <Filter>source\generic\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\opengl\loadtga.h">
+      <Filter>source\generic\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\opengl\loadtoif.h">
+      <Filter>source\generic\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\opengl\perspectiveGL.h">
+      <Filter>source\generic\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\drawcircle.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\drawhexagon.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\drawline.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\drawpolygon.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\filtersurface.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\getputpixel.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\loadanddrawsurfaces.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\rotoscale.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\sdldraw\savesurface.h">
+      <Filter>source\generic\sdldraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\3dfunctions.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\3DMath.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\bresenham.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\dirlist.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\generic.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\genericmath.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\genericsettings.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\initvideo.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\input.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\loadobj.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\lodepng.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\readinifiles.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\spherebumpmesh.h">
+      <Filter>source\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\al.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\alc.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\alext.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\efx.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\efx-creative.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\efx-presets.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\sound.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\alut.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\generic\AL\EFX-Util.h">
+      <Filter>source\generic\OpenAL</Filter>
+    </ClInclude>
+    <ClInclude Include="source\sky\GL.H">
+      <Filter>source\generic\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="source\sky\GLAux.h">
+      <Filter>source\generic\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="source\sky\glut.h">
+      <Filter>source\generic\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="source\sky\skybox.h">
+      <Filter>source\generic\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\GL\glew.h" />
+    <ClInclude Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\GL\glxew.h" />
+    <ClInclude Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\GL\wglew.h" />
+    <ClInclude Include="source\projectshaders.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp">
+      <Filter>source\generic\projectspecific</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

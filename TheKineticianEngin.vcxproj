@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test123|Win32">
+      <Configuration>Test123</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DE67D0CF-3C13-493C-B73E-D75E25159835}</ProjectGuid>
+    <RootNamespace>Racer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Kinetica</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>PGInstrument</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSBuildStartupDirectory)\source;$(MSBuildStartupDirectory)\source\include;$(MSBuildStartupDirectory)\source\generic;$(MSBuildStartupDirectory)\source\sky;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'">$(MSBuildStartupDirectory)\source;$(MSBuildStartupDirectory)\source\include;$(MSBuildStartupDirectory)\source\generic;$(MSBuildStartupDirectory)\source\sky;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MSBuildStartupDirectory)\source;$(MSBuildStartupDirectory)\source\include;$(MSBuildStartupDirectory)\source\generic;$(MSBuildStartupDirectory)\source\sky;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(MSBuildStartupDirectory)\source\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;SDL_mixer.lib;opengl32.lib;glut32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;OpenAL32.lib;alut.lib;glaux.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test123|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(MSBuildStartupDirectory)\source\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;SDL_mixer.lib;opengl32.lib;glut32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;OpenAL32.lib;alut.lib;glaux.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <ProgramDatabaseFile />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(MSBuildStartupDirectory)\source;$(MSBuildStartupDirectory)\source\include;$(MSBuildStartupDirectory)\source\generic;$(MSBuildStartupDirectory)\source\sky;$(IncludePath)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;SDL_mixer.lib;opengl32.lib;glu32.lib;libovr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(MSBuildStartupDirectory)\source\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <PreventDllBinding>
+      </PreventDllBinding>
+      <ForceFileOutput>
+      </ForceFileOutput>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\GL\glew.h" />
+    <ClInclude Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\GL\glxew.h" />
+    <ClInclude Include="..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\GL\wglew.h" />
+    <ClInclude Include="source\generic\3dfunctions.h" />
+    <ClInclude Include="source\generic\3DMath.h" />
+    <ClInclude Include="source\generic\AL\al.h" />
+    <ClInclude Include="source\generic\AL\alc.h" />
+    <ClInclude Include="source\generic\AL\alext.h" />
+    <ClInclude Include="source\generic\AL\alut.h" />
+    <ClInclude Include="source\generic\AL\efx-creative.h" />
+    <ClInclude Include="source\generic\AL\efx-presets.h" />
+    <ClInclude Include="source\generic\AL\EFX-Util.h" />
+    <ClInclude Include="source\generic\AL\efx.h" />
+    <ClInclude Include="source\generic\AL\sound.h" />
+    <ClInclude Include="source\generic\bresenham.h" />
+    <ClInclude Include="source\generic\dashboard\dashbars.h" />
+    <ClInclude Include="source\generic\dashboard\dashbutton.h" />
+    <ClInclude Include="source\generic\dashboard\dashcursor.h" />
+    <ClInclude Include="source\generic\dashboard\dashloop.h" />
+    <ClInclude Include="source\generic\dashboard\dashmenu.h" />
+    <ClInclude Include="source\generic\dashboard\dashonoff.h" />
+    <ClInclude Include="source\generic\dashboard\dashsetup.h" />
+    <ClInclude Include="source\generic\dashboard\dashtext.h" />
+    <ClInclude Include="source\generic\dashboard\dashtime.h" />
+    <ClInclude Include="source\generic\dirlist.h" />
+    <ClInclude Include="source\generic\generic.h" />
+    <ClInclude Include="source\generic\genericmath.h" />
+    <ClInclude Include="source\generic\genericsettings.h" />
+    <ClInclude Include="source\generic\initvideo.h" />
+    <ClInclude Include="source\generic\input.h" />
+    <ClInclude Include="source\generic\loadobj.h" />
+    <ClInclude Include="source\generic\lodepng.h" />
+    <ClInclude Include="source\generic\opengl\Build2DMipMapsGL.h" />
+    <ClInclude Include="source\generic\opengl\loadbmp.h" />
+    <ClInclude Include="source\generic\opengl\loadtexture.h" />
+    <ClInclude Include="source\generic\opengl\loadtga.h" />
+    <ClInclude Include="source\generic\opengl\loadtoif.h" />
+    <ClInclude Include="source\generic\opengl\perspectiveGL.h" />
+    <ClInclude Include="source\generic\readinifiles.h" />
+    <ClInclude Include="source\generic\sdldraw\drawcircle.h" />
+    <ClInclude Include="source\generic\sdldraw\drawhexagon.h" />
+    <ClInclude Include="source\generic\sdldraw\drawline.h" />
+    <ClInclude Include="source\generic\sdldraw\drawpolygon.h" />
+    <ClInclude Include="source\generic\sdldraw\filtersurface.h" />
+    <ClInclude Include="source\generic\sdldraw\getputpixel.h" />
+    <ClInclude Include="source\generic\sdldraw\loadanddrawsurfaces.h" />
+    <ClInclude Include="source\generic\sdldraw\rotoscale.h" />
+    <ClInclude Include="source\generic\sdldraw\savesurface.h" />
+    <ClInclude Include="source\generic\spherebumpmesh.h" />
+    <ClInclude Include="source\projectloop.h" />
+    <ClInclude Include="source\projectsetup.h" />
+    <ClInclude Include="source\projectshaders.h" />
+    <ClInclude Include="source\settings.h" />
+    <ClInclude Include="source\projectspecific\drawhud.h" />
+    <ClInclude Include="source\projectspecific\drawworld.h" />
+    <ClInclude Include="source\projectspecific\entities.h" />
+    <ClInclude Include="source\projectspecific\genentities.h" />
+    <ClInclude Include="source\projectspecific\genworldgrid.h" />
+    <ClInclude Include="source\projectspecific\minimap.h" />
+    <ClInclude Include="source\projectspecific\play.h" />
+    <ClInclude Include="source\projectspecific\saveandload.h" />
+    <ClInclude Include="source\projectspecific\tiles.h" />
+    <ClInclude Include="source\sky\GL.H" />
+    <ClInclude Include="source\sky\GLAux.h" />
+    <ClInclude Include="source\sky\glut.h" />
+    <ClInclude Include="source\sky\skybox.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
