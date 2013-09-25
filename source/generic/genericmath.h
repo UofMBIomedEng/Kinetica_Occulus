@@ -1,5 +1,3 @@
-
-
 int rounduptopowof2(int num){
 	int powof2=2;
 	while(powof2<num)powof2*=2;

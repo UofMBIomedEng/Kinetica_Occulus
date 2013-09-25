@@ -263,9 +263,9 @@ void play(float gamespeed){
 		else{
 			//if(((float)joystick.wXpos-32768>1500)||((float)joystick.wXpos-32768<-1500)) camyang+=((float)joystick.wXpos-32768)*(0.023/32768)*gamespeed;	
 			if((32768-(float)joystick.wYpos>1500)||(32768-(float)joystick.wYpos<-1500)){
-				playerzposmov+=(32768-(float)joystick.wYpos)*(0.03/32768)*gamespeed*cos(camxang)*cos(camyang);
+				playerzposmov-=(32768-(float)joystick.wYpos)*(0.03/32768)*gamespeed*cos(camxang)*cos(-camyang);
 				playeryposmov-=(32768-(float)joystick.wYpos)*(0.03/32768)*gamespeed*sin(camxang);
-				playerxposmov+=(32768-(float)joystick.wYpos)*(0.03/32768)*gamespeed*cos(camxang)*sin(camyang);
+				playerxposmov-=(32768-(float)joystick.wYpos)*(0.03/32768)*gamespeed*cos(camxang)*sin(-camyang);
 			}
 			//	playeryposmov+=(32768-(float)joystick.wYpos)*(JoyTransVel/32768)*sin(-camxang);
 			//	camxang=((float)joystick.wZpos-32768)*(45*radiansindegree/32768);	

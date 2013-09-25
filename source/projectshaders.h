@@ -5,6 +5,17 @@
 #include <GL/glew.h>
 #include <GL/glut.h>
 
+
+double dyneye = 0.05;
+double dyntest = 1;
+double dynasp = 1.6;
+double dyndist = 0.6;
+int    eye_offset = 86;
+
+using namespace OVR;
+
+
+
 using namespace std;
 
 static const GLchar *vsSource;
@@ -32,8 +43,8 @@ float K3 = 0.0f;
 //#define EyeLeft 1
 //#define EyeRight 0
 
-
-
+const Quatf&   GetOrientation()  { return Rot; }
+const float    YawInitial  = 3.141592f;
 
 void error(string msg)
 {
@@ -201,6 +212,7 @@ void renderDistortedEye(int eye, float x, float y, float w, float h)
         glUniform2f(LensCenterLocation, x + (w + DistortionXCenterOffset * 0.5f)*0.5f, y + h*0.5f);
         glUniform2f(ScreenCenterLocation, x + w*0.5f, y + h*0.5f);
         glUniform2f(ScaleLocation, (w/2.0f) * 0.552, (h/2.0f) * 0.891 * as);
+		//glUniform2f(ScaleLocation, (w/2.0f) * 0.891, (h/2.0f) * 0.891 * as);
         glUniform2f(ScaleInLocation, (2.0f/w), (2.0f/h) / as);
 
         glUniform4f(HmdWarpParamLocation, K0, K1, K2, K3);
@@ -285,4 +297,88 @@ void renderToScreen()
 
     glUseProgram(0);
     glEnable(GL_DEPTH_TEST);
+}
+
+static void RenderScene()
+{
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+	beginOffScreenRenderPass();
+
+	glEnable(GL_SCISSOR_TEST);
+
+	//render left half
+	glViewport(eye_offset, 0, (int)((screenw/2)-eye_offset), screenh);
+	glScissor(eye_offset, 0, (int)((screenw/2)-eye_offset), screenh);
+	
+	drawworld(Left);
+//	drawhud();
+
+	glDisable(GL_SCISSOR_TEST);
+
+	glEnable(GL_SCISSOR_TEST);
+	//render right half
+	glViewport((int)screenw/2, 0, (int)((screenw/2)-eye_offset), screenh);
+	glScissor((int)screenw/2, 0, (int)((screenw/2)-eye_offset), screenh);
+	drawworld(Right);
+//	drawhud();
+
+	glDisable(GL_SCISSOR_TEST);
+
+	//apply post distortion via shaders
+	glViewport(0, 0, screenw, screenh);
+	renderToScreen();
+
+	glDisable(GL_SCISSOR_TEST);
+}
+
+void load_OVR(void){
+	EyeYaw = YawInitial;
+	EyePitch = 0;
+	EyeRoll = 0;
+	LastSensorYaw = 0;
+
+	pManager = OVR::DeviceManager::Create();
+	if(pManager)
+	{
+		OVR::DeviceEnumerator<OVR::SensorDevice> dEnum = pManager->EnumerateDevices<OVR::SensorDevice>();
+		while(dEnum)
+		{
+			OVR::DeviceInfo info;
+			if (dEnum.GetDeviceInfo(&info))
+			{
+				if(strstr(info.ProductName, "Tracker"))
+				{
+					break;
+				}
+			}
+			dEnum.Next();
+		}
+		if(dEnum)
+		{
+			pSensor = dEnum.CreateDevice();
+		}
+		if (pSensor)
+		{
+			bool bWaitForSuccessfulRange = true;
+			float maxAcceleration = 4 * 9.81f;
+			float maxRotationRate = 8 * OVR::Math<float>::Pi;
+			float maxMagneticField = 1.0f;
+			pSensor->SetRange(OVR::SensorRange(maxAcceleration,maxRotationRate,maxMagneticField), bWaitForSuccessfulRange);
+		}
+		if(dEnum)
+		{
+			dEnum.Clear();
+		}
+		if(pSensor)
+		{
+			fusion.AttachToSensor(pSensor);
+		}
+	}
+
 }

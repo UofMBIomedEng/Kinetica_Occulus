@@ -28,8 +28,8 @@ void drawhud(){
 	sprintf_s(temptext,"%s%3.2f%s%3.2f%s%3.2f","R:R=",camxang," P=",camyang, " Y=", camzang);
 	dashbutton(25,195,200,10,0,0,(char*)temptext);
 
-	sprintf_s(temptext,"Test=%.5f",dyneye );
-	dashbutton(25,225,200,10,0,0,(char*)temptext);
+//	sprintf_s(temptext,"Test=%.5f",dyneye );
+//	dashbutton(25,225,200,10,0,0,(char*)temptext);
 	//danyal added win_clue as a char...I hope that's ok!
 	sprintf(temptext,"%d",worldgrid[(int)(playerxpos/10)][(int)(playerypos/10)][(int)(playerzpos/10)][0]);
 	dashbutton(25,255,200,10,0,0,(char*)temptext);

@@ -25,11 +25,15 @@ void set3dcamera(float xpos,float ypos,float zpos,float xang,float yang,float za
 	//glFrustum(
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+
 	//rotate
 	glRotatef(zang*degreesinradian,0,0,1);
 	glRotatef(xang*degreesinradian,1,0,0);
 	glRotatef(yang*degreesinradian,0,1,0);
 	//position
+
+	SKYBOX_Render();
+
 	glTranslatef(-xpos,-ypos,-zpos);
 }
 

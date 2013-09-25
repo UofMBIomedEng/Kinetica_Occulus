@@ -54,7 +54,7 @@ bool SKYBOX_Initialize(){
 
 }
 
-void SKYBOX_DrawSkyBox( float camera_yaw, float camera_pitch, float camera_roll ){
+void SKYBOX_DrawSkyBox(void){
 	// Cube size
 	float t = 1.5f;
 
@@ -62,12 +62,13 @@ void SKYBOX_DrawSkyBox( float camera_yaw, float camera_pitch, float camera_roll 
 	glBindTexture(GL_TEXTURE_CUBE_MAP_ARB, cube_map_texture_ID);
 
 	//setting the orientation
-	glPushMatrix();
-	glLoadIdentity();
-	glRotatef( camera_pitch, 1.0f, 0.0f, 0.0f );
-	glRotatef( camera_yaw, 0.0f, 1.0f, 0.0f );	
-	glRotatef(camera_roll,0.0f,0.0f,1.0f);
+//	glPushMatrix();
+//	glLoadIdentity();
+//	glRotatef( camera_pitch, 1.0f, 0.0f, 0.0f );
+//	glRotatef( camera_yaw, 0.0f, 1.0f, 0.0f );	
+//	glRotatef(camera_roll,0.0f,0.0f,1.0f);
 
+	 // glRotated(90,0,1,0);
 
 	// Rendering the geometry
 	glBegin(GL_TRIANGLE_STRIP);			                // X Negative	
@@ -113,18 +114,18 @@ void SKYBOX_DrawSkyBox( float camera_yaw, float camera_pitch, float camera_roll 
 	glEnd();
 
 	// Reinitialization of the the mode view matrix
-	glPopMatrix();
+	//glPopMatrix();
 }
 
 
-void SKYBOX_Render( float camera_yaw, float camera_pitch ,float camera_roll){
+void SKYBOX_Render(){
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_CUBE_MAP_ARB); 
 	glDisable(GL_LIGHTING);
 
 	glDepthMask(GL_FALSE);
 
-	SKYBOX_DrawSkyBox( camera_yaw, camera_pitch, camera_roll );  
+	SKYBOX_DrawSkyBox();  
 
 	glDepthMask(GL_TRUE);
 

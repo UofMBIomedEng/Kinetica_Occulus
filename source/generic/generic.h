@@ -1,6 +1,38 @@
 //super ultra mega generic includes
 
 //#define NO_SDL_GLEXT
+bool useshaders = true;
+
+#include <GL\glew.h>
+#include <GL\glut.h>
+
+const float PI=3.14159265f;
+const float degreesinradian=360/(2*PI); 
+const float radiansindegree=(2*PI)/360;
+
+using namespace OVR;
+
+float                camxpos=0,camypos=0,camzpos=0;
+float                camxang=0,camyang=90*radiansindegree,camzang=0;
+int vp;
+bool shutdownprogram = 0;
+Ptr<HMDDevice>      pHMD;
+Quatf               Rot;
+float               LastSensorYaw;
+Vector3f            EyePos;
+float               EyeYaw;
+float               EyePitch;       
+float               EyeRoll;   
+float               tyaw,yaw, pitch, roll,Start_yaw=0;
+static OVR::SensorDevice* pSensor;
+static OVR::SensorFusion fusion;
+static OVR::DeviceManager* pManager;
+static OVR::Quatf q;
+
+
+enum Eye {
+        Left, Right
+    };
 
 bool shading_enabled = false;
 
@@ -82,6 +114,8 @@ GLuint cube_map_texture_ID;
 //the dashboard and related functions
 #include "dashboard/dashsetup.h"
 #include "dashboard/dashloop.h"
+
+
 
 void genericsetup(){
 	//seed the random number generator

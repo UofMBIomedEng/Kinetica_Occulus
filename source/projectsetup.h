@@ -182,6 +182,9 @@ void projectsetup()
 	//place entities
 	genentities();
 	genminimap();
+
+	GLenum res = glewInit();
+	
 }
 
 
